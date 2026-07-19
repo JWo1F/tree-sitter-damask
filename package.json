@@ -1,7 +1,7 @@
 {
-  "name": "tree-sitter-rsc",
+  "name": "tree-sitter-damask",
   "version": "0.1.0",
-  "description": "Tree-sitter grammar for RSC (Rust Smart Components) templates",
+  "description": "Tree-sitter grammar for Damask templates",
   "license": "MIT OR Apache-2.0",
   "main": "bindings/node",
   "devDependencies": {
@@ -9,9 +9,9 @@
   },
   "tree-sitter": [
     {
-      "scope": "source.rsc",
-      "file-types": ["rsc"],
-      "injection-regex": "rsc"
+      "scope": "source.damask",
+      "file-types": ["dmk"],
+      "injection-regex": "damask"
     }
   ]
 }

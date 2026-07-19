@@ -1,13 +1,13 @@
 /**
- * Tree-sitter grammar for RSC (Rust Smart Components) templates.
+ * Tree-sitter grammar for Damask templates.
  *
- * RSC templates are HTML with brace `{ … }` tags. This grammar recognizes
+ * Damask templates are HTML with brace `{ … }` tags. This grammar recognizes
  * the tag structure — balancing nested braces and respecting string/char
  * literals so struct literals inside `{@render Card { … }}` don't close the tag
  * early — and exposes each tag's `code` for Rust injection (see injections.scm).
  * It does not parse the Rust itself.
  *
- * It *does* parse an element's angle-bracket tag, because RSC puts its own
+ * It *does* parse an element's angle-bracket tag, because Damask puts its own
  * syntax inside one: an attribute value may hold `{ … }` tags, a class list, or
  * a `{...}` spread. Modelling only text-between-tags cannot colour any of that —
  * a quoted value containing a tag is split across `text` nodes, so an injected
@@ -24,7 +24,7 @@
 const CLASS_STRING = /"([^"\\]|\\.)*"/;
 
 module.exports = grammar({
-  name: 'rsc',
+  name: 'damask',
 
   extras: () => [],
 
